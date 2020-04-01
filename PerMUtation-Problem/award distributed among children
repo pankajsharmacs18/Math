@@ -1,0 +1,50 @@
+package math;
+
+import java.util.Scanner;
+
+class ProSove
+{
+    Scanner inp=new Scanner(System.in);
+    public void solutionType1(int n,int r)      //P(n,r)=n!/(n-r)!
+    {
+        int factN=1;
+        int factR=1;
+        int per=0;
+        if(r>n||n==0)
+        {
+            System.out.println("this is not valid Value : ");
+            return;
+        }
+        else if(n==r||r==0)
+        {
+            System.out.println("total case is : "+1);
+        }
+        else
+            {
+
+                for (int i = 1; i <=n ; i++)
+                {
+                    if(i<=n-r)
+                    {
+                        factR=factR*i;
+                    }
+                    factN=factN*i;
+                }
+                per=factN/factR;
+                System.out.println(" chance to distribute award :  : "+per);
+            }
+    }
+}
+public class MathPract {
+    public static void main(String... PankajSharma)
+    {
+        ProSove obj=new ProSove();
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter total number of Children ");
+        int n =sc.nextInt();
+        System.out.println("Ener Total Number of Awards : : ");
+        int r=sc.nextInt();
+        obj.solutionType1(n,r);
+        System.out.println("pankaj sharma ");
+    }
+}
