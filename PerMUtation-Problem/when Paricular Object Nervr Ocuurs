@@ -1,0 +1,81 @@
+package math;
+
+import java.util.Scanner;
+
+class ProSove
+{
+    Scanner inp=new Scanner(System.in);
+    public void solutionType1(int n,int r)      //P(n,r)=n!/(n-r)!
+    {
+        int factN=1;
+        int factR=1;
+        int per=0;
+        if(r>n||n==0)
+        {
+            System.out.println("this is not valid Value : ");
+            return;
+        }
+        else if(n==r||r==0)
+        {
+            System.out.println("total case is : "+1);
+        }
+        else
+            {
+
+                for (int i = 1; i <=n ; i++)
+                {
+                    if(i<=n-r)
+                    {
+                        factR=factR*i;
+                    }
+                    factN=factN*i;
+                }
+                per=factN/factR;
+                System.out.println("Total PermuTation : "+per);
+            }
+    }
+    public void solutionType2(int n,int r,int k)      //P(n,r)=n!/(n-r)!
+    {
+        int factN=1;
+        int factR=1;
+        int per=0;
+        if(r>n-k||n==0)
+        {
+            System.out.println("this is not valid Value : ");
+            return;
+        }
+        else if(n-k==n-r)
+        {
+            System.out.println("total case is : "+1);
+        }
+        else
+        {
+            for (int i = 1; i <=n-k ; i++)
+            {
+                factN=factN*i;
+            }
+            for (int i = 1; i <=n-r-k ; i++)
+            {
+                factR=factR*i;
+            }
+            per=factN/factR;
+            System.out.println("Total PermuTation : "+per);
+        }
+    }
+}
+public class MathPract {
+    public static void main(String... PankajSharma)
+    {
+        ProSove obj=new ProSove();
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter total number of distinct object : ");
+        int n =sc.nextInt();
+        System.out.println("Ener taken object at a time : ");
+        int r=sc.nextInt();
+        System.out.println("enter object which never occures ");
+        int k=sc.nextInt();
+        obj.solutionType2(n,r,k);
+        // obj.solutionType1(n,r);
+        System.out.println("pankaj sharma ");
+    }
+}
