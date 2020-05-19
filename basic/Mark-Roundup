@@ -1,0 +1,27 @@
+package mathPractice;
+
+import java.util.Scanner;
+
+class MarkRoundup
+{
+    Scanner sc=new Scanner(System.in);
+    public void markRoundUp()
+    {
+        System.out.println("Enter theory mark and practical marrk got in exam  : ");
+        float theoryMark=sc.nextFloat();
+        float practMark=sc.nextFloat();
+        System.out.println("Maximum mark criteria of mark : ");
+        int maxMark=sc.nextInt();
+        float perMARK=((theoryMark+practMark)/maxMark)*100;
+        System.out.println("Your percentage is  : "+perMARK);
+    }
+}
+public class MathMain
+{
+    public static void main(String... PankajSharma)
+    {
+        MarkRoundup obj=new MarkRoundup();
+        obj.markRoundUp();
+        System.out.println("Pankaj Sharma");
+    }
+}
