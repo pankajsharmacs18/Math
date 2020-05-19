@@ -1,0 +1,26 @@
+package mathPractice;
+
+import java.util.Scanner;
+
+class MarkRoundup
+{
+    Scanner sc=new Scanner(System.in);
+   public void sepratePart()
+   {
+       System.out.println("Enter a fractional value  : ");
+       float value=sc.nextFloat();
+       int whole=(int)value;
+       float fractional=value-whole;
+       System.out.println("In value "+value+"\nwhole part is  : "+whole+"\n frational part is  : "+fractional );
+
+   }
+}
+public class MathMain
+{
+    public static void main(String... PankajSharma)
+    {
+        MarkRoundup obj=new MarkRoundup();
+        obj.sepratePart();
+        System.out.println("Pankaj Sharma");
+    }
+}
